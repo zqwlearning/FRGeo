@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>KTOBS</title>
+	<meta name="description" content="Documentation available for FringeBN: user manual and reference networks.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bn.css">
+	<link rel="shortcut icon" href="hzau.ico" type="image/x-icon">
+</head>
+<body>
+
+	<div id="header" class="blocks">
+		基于k-tree优化节点order的贝叶斯网络学习方法研究
+	</div>
+
+	<div id="container">
+		<div id="menu">
+			<div id="inner" class="blocks">
+				<ul class="menulist">
+					<li> <a href="index.html">项目介绍</a> </li>
+					<li> <a href="ktobs.html">KTOBS在线工具</a> </li>
+					<li> <a href="download.html">相关资源下载</a> </li>
+					<li> <a href="others.html">其他</a> </li>
+				</ul>  
+			</div>
+		</div>
+	</div>
+
+    <div id="main">
+		<div id="inner2" class="blocks">
+			<h2>KTOBS算法</h2>
+			<p>我们提出了一种基于k-tree优化节点order的贝叶斯网络学习方法(KTOBS)</p>
+			<P>(1) 采用动态规划和局部学习的方法，高效准确的得到每个节点的候选父节点集。
+				基于得到的候选父节点集，选择k+1个节点构建其初始子网络</P>
+			<p>(2) 利用启发式评测策略依次添加后续节点，得到初始网络，
+				同时采用k-tree结构降低多节点处理的复杂性。基于添加节点的order，
+				采用交换order中相邻节点对的方法，通过多次迭代得到得分较高的网络结构。</p>
+			<p>(3) 用了业界广泛使用的Alarm1，Alarm3，Alarm5，Insurance1，Insurance3，Insurance5等数据集进行实验验证。
+				实验结果表明KTOBS方法所构建的网络有着最高的得分，
+				可以在相同的时间内可以学习得到比其他k-tree类算法准确度更高的网络结构。</p>
+			<h2>使用说明</h2>
+			<p>本网站提供KTOBS方法在线运行工具</p>
+			<P>(1) 点击左侧“KTOBS在线工具”超链接</P>
+			<p>(2) 在跳转到的页面选择所要运行的源文件，并且设置树宽(推荐4)，运行时间(推荐10s)，然后点击提交运行按钮</p>
+			<p>(3) 提交运行之后，在下方绘制获取的贝叶斯网络，同时用户可以根据需求点击“下载网络”按钮将网络数据下载到本地</p>
+		</div>
+    </div>
+
+	<div id="footer" class="blocks">
+		<p>Copyright © 2022. Last modified: the 20th of May. By College of Informatics - HZAU</p>
+	</div>
+
+</body>
+</html>
